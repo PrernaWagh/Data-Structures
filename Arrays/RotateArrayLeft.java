@@ -56,7 +56,7 @@ public class RotateArrayLeft {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-         rotateArray(arr, n);
+        rotateArray(arr, n,3);
         displayArray(arr, n);
     }
 }

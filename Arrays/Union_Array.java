@@ -2,7 +2,7 @@
 import java.util.HashSet;
 
 
-public class UnionArray {
+public class Union_Array {
 
     int hashFunction(int key, int size) {
         return key % size;
@@ -65,7 +65,7 @@ public class UnionArray {
         }
     }
     public static void main(String s[]) {
-        UnionArray obj1 = new UnionArray();
+        Union_Array obj1 = new Union_Array();
         int arr1[] = {1, 1, 2, 3, 4, 5};
         int arr2[] = {2, 3, 4, 4, 5, 6};
 

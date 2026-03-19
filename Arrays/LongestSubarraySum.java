@@ -12,7 +12,7 @@ class LongestSubarraySum {
             sum +=nums[i];
 	    if(sum == k)
 	    {
-		maxlen = Math.max(maxlen.i+1);
+		maxlen = Math.max(maxlen,i+1);
 	    }
             if(map.containsKey(sum-k))
             {
