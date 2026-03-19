@@ -1,17 +1,15 @@
+//find all the permuations of given string 
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class StringPermutation {
-        void getPermutations(String str, int index, List<List<Character>> ans) {
+        void getPermutations(String str, int index, List<String> ans) {
             int n = str.length();
             if (index == n) {
-                List<Character> temp = new ArrayList<>();
-                for (char s : str.toCharArray()) {
-                    temp.add(s);
-                }
-                ans.add(temp);
+                ans.add(str);
                 return;
             }
             for (int i = index; i < n; i++) {
@@ -29,8 +27,8 @@ public class StringPermutation {
 
             return new String(arr);
         }
-        public List<List<Character>> permute(String str) {
-            List<List<Character>> ans = new ArrayList<>();
+        public List<String> permute(String str) {
+            List<String> ans = new ArrayList<>();
             getPermutations(str, 0, ans);
             return ans;
         }
@@ -39,9 +37,17 @@ public class StringPermutation {
         StringPermutation s1 = new StringPermutation();
         String input = null;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string : ");
         input = sc.nextLine();
 
-        List<List<Character>> ans = s1.permute(input);
+        List<String> ans = s1.permute(input);
+        System.out.println("Permuations of string are : ");
         System.out.println(ans);
     }
 }
+
+//output:-
+// Enter a string : 
+// abc
+// Permuations of string are : 
+// [abc, acb, bac, bca, cba, cab]
