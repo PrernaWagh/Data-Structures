@@ -1,0 +1,36 @@
+class TreeNode{
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+public class DiameterOfTree {
+     int ans = 0;
+    int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftHt = height(root.left);
+        int rightHt = height(root.right);
+
+        ans = Math.max(leftHt+rightHt,ans);
+        return Math.max(leftHt, rightHt) + 1;
+    }
+
+    public int diameterOfBinaryTree(TreeNode root) {
+       height(root);
+       return ans;
+    }
+}
