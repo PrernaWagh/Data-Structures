@@ -1,11 +1,12 @@
 import java.util.Stack;
 
 public class QueueUsingStack {
-    Stack<Integer> s1 = new Stack<>();
-    Stack<Integer> s2 = new Stack<>();
+    Stack<Integer> s1 ;
+    Stack<Integer> s2;
 
     public QueueUsingStack() {
-        
+        s1 = new Stack<>();
+        s2 = new Stack<>();
     }
     
     public void push(int x) {
